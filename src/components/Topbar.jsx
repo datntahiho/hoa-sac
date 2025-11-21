@@ -1,9 +1,11 @@
+// src/components/TopBar.jsx
 import { Phone, Search, ShoppingCart } from "lucide-react";
 
 export default function TopBar({
   phone = "0587.10.20.03",
   logoSrc = "/images/hoa-sac-logo.jpeg",
   onCartClick,
+  cartCount = 0,
 }) {
   return (
     <div className="w-full h-20">
@@ -12,7 +14,6 @@ export default function TopBar({
         <div className="flex items-center gap-2">
           <span className="inline-flex items-center gap-4 text-sm">
             <Phone className="h-4 w-4 text-emerald-600" />
-            {/* <Phone /> */}
             <span>
               Hotline: <strong className="font-semibold">{phone}</strong>
             </span>
@@ -22,6 +23,8 @@ export default function TopBar({
         {/* Center: Logo */}
         <div className="flex justify-center">
           <a href="/" className="font-semibold tracking-wide text-lg">
+            {/* muốn dùng ảnh logo thì replace */}
+            {/* <img src={logoSrc} alt="HOASAC" className="h-10 w-auto" /> */}
             HOA<span className="text-emerald-600">SAC</span>
           </a>
         </div>
@@ -42,8 +45,8 @@ export default function TopBar({
             aria-label="Giỏ hàng"
           >
             <ShoppingCart className="h-5 w-5" />
-            <span className="absolute -right-1 -top-1 h-5 w-5 rounded-full bg-emerald-600 text-white text-xs grid place-items-center">
-              0
+            <span className="absolute -right-1 -top-1 h-5 min-w-[20px] rounded-full bg-emerald-600 text-white text-xs grid place-items-center px-1">
+              {cartCount}
             </span>
           </button>
         </div>

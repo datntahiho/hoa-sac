@@ -11,21 +11,12 @@ import {
 const SLIDES = [
   {
     image: "/images/slider1.webp",
-    title: "GIAO NHANH",
-    subtitle: "THI CÔNG TRỌN GÓI",
-    promo: "Giá tốt tại xưởng",
   },
   {
     image: "/images/slider2.jpg",
-    title: "MUA TRANH TẠI XƯỞNG",
-    subtitle: "TIẾT KIỆM",
-    promo: "5 – 10%",
   },
   {
     image: "/images/slider3.jpg",
-    title: "IN UV SẮC NÉT",
-    subtitle: "BỀN MÀU LÂU NĂM",
-    promo: "Tư vấn miễn phí",
   },
 ];
 
@@ -54,7 +45,7 @@ export default function HeroSlider() {
                     </h2>
 
                     {/* khung ưu đãi viền đôi */}
-                    <div className="relative mt-8 w-fit">
+                    {/* <div className="relative mt-8 w-fit">
                       <div className="absolute -inset-3 border border-white/40 rounded-lg" />
                       <div className="rounded-lg border border-white/60 px-8 py-6 backdrop-blur-sm bg-white/10">
                         <p className="uppercase tracking-widest text-xs text-white/80">
@@ -73,7 +64,7 @@ export default function HeroSlider() {
                       >
                         Khám phá ngay
                       </a>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </CarouselItem>

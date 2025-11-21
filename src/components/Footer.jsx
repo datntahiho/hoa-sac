@@ -26,8 +26,7 @@ export default function Footer() {
           <h5 className="font-semibold mb-2">Kết nối</h5>
           <div className="flex gap-3 text-sm text-gray-600">
             <a href="#">Facebook</a>
-            <a href="#">Zalo</a>
-            <a href="#">Instagram</a>
+            <a href="#">Tiktok</a>
           </div>
         </div>
       </div>

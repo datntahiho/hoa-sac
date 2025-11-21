@@ -3,7 +3,7 @@ import About from "../components/About";
 import FloatingActions from "../components/FloatingActions";
 import HeroSlider from "../components/HeroSlider";
 import ProductsSection from "../components/sections/ProductsSection";
-import productsData from "../data/products.json";
+import productsData from "../data/products.js";
 
 export default function Home() {
   const products = productsData.slice(0, 8);

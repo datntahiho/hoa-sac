@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useParams, Navigate } from "react-router-dom";
-import data from "@/data/products.json";
+import data from "@/data/products.js";
 import ProductDetailPage from "./ProductDetailPage";
 
 export default function ProductDetail() {
@@ -50,5 +50,7 @@ function normalize(p) {
     },
     sellingPoints: p.sellingPoints,
     reviews: p.reviews ?? [],
+    id : p.id,
+    StoryComponent: p.StoryComponent || null,
   };
 }
