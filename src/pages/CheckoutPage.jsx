@@ -160,6 +160,7 @@ export default function CheckoutPage() {
                 <button
                   type="button"
                   className="border px-5 py-2 text-xs font-semibold tracking-wide"
+                  onClick={() => navigate("/tranh-to-theo-so")}
                 >
                   ← TIẾP TỤC XEM SẢN PHẨM
                 </button>

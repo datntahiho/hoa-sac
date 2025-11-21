@@ -164,7 +164,10 @@ export default function CartPage() {
 
             {/* Nút tiếp tục xem sản phẩm */}
             <div className="mt-6">
-              <button className="border px-5 py-2 text-xs font-semibold tracking-wide">
+              <button
+                className="border px-5 py-2 text-xs font-semibold tracking-wide"
+                onClick={() => navigate("/tranh-to-theo-so")}
+              >
                 ← TIẾP TỤC XEM SẢN PHẨM
               </button>
             </div>
@@ -187,9 +190,7 @@ export default function CartPage() {
 
               <div className="flex justify-between text-sm font-semibold pt-2 border-t border-gray-200">
                 <span>Tổng</span>
-                <span className="text-base">
-                  {formatCurrency(subtotal)}
-                </span>
+                <span className="text-base">{formatCurrency(subtotal)}</span>
               </div>
 
               <button

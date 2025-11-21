@@ -9,6 +9,7 @@ import SellingPoints from "@/components/products/SellingPoints";
 import PolicyTabs from "@/components/products/PolicyTabs";
 
 import { addToCart } from "@/utils/cartStorage";
+import toast from "react-hot-toast";
 
 export default function ProductDetailPage({ product }) {
   const [qty, setQty] = useState(1);
@@ -16,7 +17,7 @@ export default function ProductDetailPage({ product }) {
 
   const handleAddToCart = () => {
     addToCart(product.id, qty);
-    alert("Đã thêm vào giỏ hàng!");
+    toast.success("Đã thêm vào giỏ hàng!");
   };
 
   const handleBuyNow = () => {

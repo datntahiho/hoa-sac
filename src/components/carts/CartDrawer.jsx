@@ -25,7 +25,7 @@ export default function CartDrawer({ open, onClose, items = [] }) {
 
   const goToCheckout = () => {
     onClose();
-    navigate("/checkout");
+    navigate("/thanh-toan");
   };
 
   return ReactDOM.createPortal(
