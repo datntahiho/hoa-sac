@@ -11,7 +11,7 @@ export default function Category() {
   );
 
   return (
-    <div className="bg-gray-50 py-12">
+    <div className="py-12">
       <div className="mx-auto max-w-6xl px-4">
         <ProductsSection title="" products={products} />
       </div>

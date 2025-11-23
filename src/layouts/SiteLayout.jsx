@@ -9,7 +9,7 @@ import CartDrawer from "@/components/carts/CartDrawer";
 
 import { getCartItems } from "@/utils/cartStorage";
 import productsData from "@/data/products.js";
-
+import TopNav from "@/components/TopNav";
 export default function SiteLayout() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]); // chứa FULL product + quantity
@@ -50,10 +50,12 @@ export default function SiteLayout() {
         onCartClick={() => setIsCartOpen(true)}
         cartCount={cartCount}
       />
+              <TopNav/>
+      
 
       <ScrollToTop />
 
-      <div className="flex-1">
+      <div className="flex-1 bg-yellow-50/60">
         <Outlet />
       </div>
 

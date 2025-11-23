@@ -4,7 +4,7 @@ import FloatingActions from "../components/FloatingActions";
 import HeroSlider from "../components/HeroSlider";
 import ProductsSection from "../components/sections/ProductsSection";
 import productsData from "../data/products.js";
-
+import TopNav from "../components/TopNav";
 export default function Home() {
   const products = productsData.slice(0, 8);
 
@@ -12,8 +12,9 @@ export default function Home() {
     <>
       <main>
         <HeroSlider />
-        <FeatureGrid />
+       
         <About />
+         <FeatureGrid />
         <ProductsSection
           title="Tranh Tô Theo Số"
           products={products}

@@ -38,7 +38,7 @@ export default function OrderSuccessPage() {
   );
 
   return (
-    <div className="bg-white">
+    <div className="bg-yellow-50/60">
       <div className="mx-auto max-w-6xl px-4 py-10">
         {/* Thông báo trên đầu + nút quay lại cửa hàng */}
         <div className="text-center mb-8">
@@ -62,16 +62,12 @@ export default function OrderSuccessPage() {
                 Thông tin chuyển khoản ngân hàng
               </h1>
               <p className="text-sm">
-                <span className="font-semibold">
-                  NGO VO TRUONG NINH
-                </span>
+                <span className="font-semibold">NGO VO TRUONG NINH</span>
               </p>
               <ul className="text-sm list-disc list-inside space-y-1">
                 <li>
                   Ngân hàng:{" "}
-                  <span className="font-semibold">
-                    TpBank CN Hà Nội
-                  </span>
+                  <span className="font-semibold">TpBank CN Hà Nội</span>
                 </li>
                 <li>
                   Số tài khoản:{" "}
@@ -129,22 +125,16 @@ export default function OrderSuccessPage() {
 
                 <div className="grid grid-cols-[minmax(0,2fr)_minmax(0,1fr)] py-2 border-b border-gray-200 text-sm">
                   <span className="font-semibold">Tổng số phụ:</span>
-                  <span className="text-right">
-                    {formatCurrency(subtotal)}
-                  </span>
+                  <span className="text-right">{formatCurrency(subtotal)}</span>
                 </div>
 
                 <div className="grid grid-cols-[minmax(0,2fr)_minmax(0,1fr)] py-2 border-b border-gray-200 text-sm">
                   <span className="font-semibold">Tổng cộng:</span>
-                  <span className="text-right">
-                    {formatCurrency(subtotal)}
-                  </span>
+                  <span className="text-right">{formatCurrency(subtotal)}</span>
                 </div>
 
                 <div className="grid grid-cols-[minmax(0,2fr)_minmax(0,1fr)] py-2 text-sm">
-                  <span className="font-semibold">
-                    Phương thức thanh toán:
-                  </span>
+                  <span className="font-semibold">Phương thức thanh toán:</span>
                   <span className="text-right">{order.paymentMethod}</span>
                 </div>
               </div>
@@ -161,7 +151,7 @@ export default function OrderSuccessPage() {
           </section>
 
           {/* RIGHT: Box cảm ơn */}
-          <aside className="border border-gray-200 bg-gray-50 p-5 text-sm space-y-3">
+          <aside className="rounded border border-gray-200 bg-white p-3 text-xs leading-relaxed space-y-1">
             <p className="text-green-700 font-semibold">
               Cảm ơn bạn. Đơn hàng của bạn đã được nhận.
             </p>
@@ -187,6 +177,14 @@ export default function OrderSuccessPage() {
                 <span>{order.paymentMethod}</span>
               </li>
             </ul>
+
+            <div className="mt-2 flex justify-center">
+              <img
+                src="/images/qr-code-thanh-toan.png"
+                alt="QR TpBank"
+                className="w-52 h-auto object-contain"
+              />
+            </div>
           </aside>
         </div>
       </div>

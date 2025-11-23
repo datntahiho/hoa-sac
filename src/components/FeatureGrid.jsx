@@ -1,47 +1,40 @@
-// src/components/FeatureGrid.jsx
-import {
-  Award,
-  Factory,
-  Tag,
-  ShieldCheck,
-  Wrench,
-  Handshake,
-} from "lucide-react";
-
-const FEATURES = [
-  { title: "Kinh nghiệm lâu năm", desc: "15 năm kinh doanh ngành tranh", Icon: Award },
-  { title: "Nhà xưởng tiên tiến", desc: "Diện tích 400m². Máy móc hiện đại", Icon: Factory },
-  { title: "Giá thành cạnh tranh", desc: "Sản phẩm chất lượng cao với giá cạnh tranh", Icon: Tag },
-  { title: "Chất lượng đảm bảo", desc: "Tranh đúng như mẫu. Đổi trả nếu không hài lòng", Icon: ShieldCheck },
-  { title: "Sản xuất theo yêu cầu", desc: "Dịch vụ trọn gói. Tuỳ chỉnh linh hoạt theo yêu cầu", Icon: Wrench },
-  { title: "Tư vấn tận tâm", desc: "Tư vấn chuyên nghiệp, đưa ra giải pháp phù hợp", Icon: Handshake },
+const BANNERS = [
+  {
+    title: "Xưởng tranh tô tại Hà Nội",
+    desc: "Sản xuất trực tiếp – giá tốt cho mọi đơn hàng.",
+    image: "/images/banner-col-1.webp",
+  },
+  {
+    title: "Trọn bộ dụng cụ đầy đủ",
+    desc: "Mỗi tranh đều kèm màu, cọ, móc treo – mở ra là tô được ngay.",
+    image: "/images/banner-col-2.webp",
+  },
+  {
+    title: "Đóng gói & giao hàng cẩn thận",
+    desc: "Đóng gói chống sốc, giao hàng toàn quốc nhanh chóng.",
+    image: "/images/banner-col-3.webp",
+  },
 ];
-
-function IconCircle({ Icon }) {
-  return (
-    <div className="mx-auto mb-4 h-20 w-20 rounded-full bg-white grid place-items-center shadow-[0_10px_30px_rgb(0,0,0,0.08)]">
-      {/* nếu dùng file svg riêng: 
-          <img src="/icons/ten-icon.svg" className="h-8 w-8" alt="" />
-      */}
-      <Icon className="h-8 w-8 text-gray-800" strokeWidth={2} />
-    </div>
-  );
-}
 
 export default function FeatureGrid() {
   return (
-    <section className="py-12 bg-white">
-      <div className="mx-auto max-w-6xl px-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {FEATURES.map((f) => (
+    <section className="py-12 bg-yellow-50/60">
+      <div className="mx-auto max-w-6xl px-4 grid gap-6 sm:grid-cols-3">
+        {BANNERS.map((item) => (
           <article
-            key={f.title}
-            className="rounded-md bg-gray-50 px-8 py-10 text-center hover:shadow-md transition-shadow"
+            key={item.title}
+            className="group rounded-lg bg-white overflow-hidden shadow-[0_10px_25px_rgba(0,0,0,0.06)] cursor-pointer"
           >
-            <IconCircle Icon={f.Icon} />
-            <h3 className="text-lg font-extrabold uppercase tracking-tight text-gray-800">
-              {f.title}
-            </h3>
-            <p className="mt-3 text-gray-600">{f.desc}</p>
+            {/* Ảnh */}
+            <div className="overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-52 object-cover transform transition-transform duration-300 group-hover:-translate-y-2"
+              />
+            </div>
+
+         
           </article>
         ))}
       </div>

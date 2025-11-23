@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { X } from "lucide-react";
-import { getCartItems, clearCart } from "@/utils/cartStorage";
+import {
+  getCartItems,
+  clearCart,
+  removeFromCart,
+  updateItemQuantity,
+} from "@/utils/cartStorage";
 import productsData from "@/data/products";
 import { useNavigate } from "react-router-dom";
 
@@ -53,6 +58,21 @@ export default function CheckoutPage() {
     return Math.floor(100000 + Math.random() * 900000).toString();
   };
 
+  const handleIncrease = (id) => {
+    updateItemQuantity(id, +1);
+    loadCart();
+  };
+
+  const handleDecrease = (id) => {
+    updateItemQuantity(id, -1);
+    loadCart();
+  };
+
+  const handleRemove = (id) => {
+    removeFromCart(id);
+    loadCart();
+  };
+
   const handlePlaceOrder = (e) => {
     e.preventDefault();
     if (!acceptTerms) return;
@@ -77,9 +97,10 @@ export default function CheckoutPage() {
         address,
         phone,
       },
+      note,
     };
 
-    // 🔥 Clear giỏ hàng sau khi đặt thành công
+    // Clear giỏ hàng sau khi đặt thành công
     clearCart();
 
     // Điều hướng sang trang cảm ơn, truyền thông tin đơn hàng
@@ -117,11 +138,12 @@ export default function CheckoutPage() {
                     key={item.id}
                     className="grid grid-cols-[minmax(0,2.5fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)] items-center border-t border-gray-200 py-4 text-sm"
                   >
+                    {/* Cột sản phẩm */}
                     <div className="flex items-start gap-3 pr-4">
                       <button
                         type="button"
                         className="mt-2 h-6 w-6 flex-shrink-0 rounded-full border border-red-500 text-red-500 flex items-center justify-center hover:bg-red-500 hover:text-white"
-                        onClick={() => {}}
+                        onClick={() => handleRemove(item.id)}
                       >
                         <X className="h-4 w-4" />
                       </button>
@@ -139,21 +161,44 @@ export default function CheckoutPage() {
                       </div>
                     </div>
 
+                    {/* Giá */}
                     <div className="text-center">
                       {formatCurrency(item.priceFrom)}
                     </div>
 
-                    <div className="flex items-center justify-center">
-                      <span className="w-16 text-center border py-1 text-sm">
+                    {/* Số lượng (có nút +/-) */}
+                    <div className="flex items-center justify-center gap-2">
+                      <button
+                        type="button"
+                        className="h-8 w-8 border text-lg leading-none flex items-center justify-center"
+                        onClick={() => handleDecrease(item.id)}
+                      >
+                        −
+                      </button>
+                      <span className="w-8 text-center border-t border-b h-8 flex items-center justify-center">
                         {item.quantity}
                       </span>
+                      <button
+                        type="button"
+                        className="h-8 w-8 border text-lg leading-none flex items-center justify-center"
+                        onClick={() => handleIncrease(item.id)}
+                      >
+                        +
+                      </button>
                     </div>
 
+                    {/* Tạm tính */}
                     <div className="text-right pr-2 font-semibold">
                       {formatCurrency(item.priceFrom * item.quantity)}
                     </div>
                   </div>
                 ))}
+
+                {cartItems.length === 0 && (
+                  <div className="py-6 text-center text-sm text-gray-500">
+                    Giỏ hàng của bạn đang trống.
+                  </div>
+                )}
               </div>
 
               <div className="mt-4 text-sm">
@@ -281,7 +326,7 @@ export default function CheckoutPage() {
 
                 {cartItems.map((item) => (
                   <div
-                    key={item.id}
+                    key={[item.id, "summary"].join("-")}
                     className="grid grid-cols-[minmax(0,2fr)_minmax(0,1fr)] px-3 py-2 border-b text-sm"
                   >
                     <div>
@@ -330,12 +375,12 @@ export default function CheckoutPage() {
                     </p>
                     <p>
                       • <strong>Chủ tài khoản:</strong>{" "}
-                      <span className="font-semibold">NGO VO TRUONG LINH</span>
+                      <span className="font-semibold">NGO VO TRUONG NINH</span>
                     </p>
                     <p>
                       • <strong>Nội dung:</strong>{" "}
                       <span className="font-semibold text-red-600">
-                        Số điện thoại đặt hàng
+                        Họ tên chuyển tiền mua tranh
                       </span>
                     </p>
                     <p>
@@ -379,7 +424,7 @@ export default function CheckoutPage() {
 
                 <button
                   type="submit"
-                  disabled={!acceptTerms}
+                  disabled={!acceptTerms || cartItems.length === 0}
                   className="mt-2 w-full bg-yellow-500 hover:bg-yellow-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white py-3 text-sm font-semibold tracking-wide"
                 >
                   ĐẶT HÀNG

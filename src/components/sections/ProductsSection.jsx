@@ -7,7 +7,7 @@ export default function ProductsSection({
   viewMoreHref,
 }) {
   return (
-    <section className="bg-gray-50 py-12">
+    <section className=" py-12">
       <div className="mx-auto max-w-6xl px-4">
         <SectionHeader
           title={title}
