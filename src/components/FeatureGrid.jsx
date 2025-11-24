@@ -18,23 +18,31 @@ const BANNERS = [
 
 export default function FeatureGrid() {
   return (
-    <section className="py-12 bg-yellow-50/60">
-      <div className="mx-auto max-w-6xl px-4 grid gap-6 sm:grid-cols-3">
+    <section className="bg-yellow-50/60 py-10 sm:py-12">
+      <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:grid-cols-3">
         {BANNERS.map((item) => (
           <article
             key={item.title}
-            className="group rounded-lg bg-white overflow-hidden shadow-[0_10px_25px_rgba(0,0,0,0.06)] cursor-pointer"
+            className="group cursor-pointer overflow-hidden rounded-lg bg-white shadow-[0_10px_25px_rgba(0,0,0,0.06)]"
           >
             {/* Ảnh */}
             <div className="overflow-hidden">
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-52 object-cover transform transition-transform duration-300 group-hover:-translate-y-2"
+                className="h-44 w-full transform object-cover transition-transform duration-300 group-hover:-translate-y-2 sm:h-52"
               />
             </div>
 
-         
+            {/* Text */}
+            <div className="px-4 py-4 sm:py-5">
+              <h3 className="text-sm sm:text-base font-semibold text-gray-900">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-xs sm:text-sm text-gray-600">
+                {item.desc}
+              </p>
+            </div>
           </article>
         ))}
       </div>

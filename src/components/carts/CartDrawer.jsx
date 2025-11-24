@@ -1,4 +1,3 @@
-// src/components/carts/CartDrawer.jsx
 import React from "react";
 import ReactDOM from "react-dom";
 import { X } from "lucide-react";
@@ -19,8 +18,8 @@ export default function CartDrawer({ open, onClose, items = [] }) {
   );
 
   const goToCart = () => {
-    onClose();              
-    navigate("/gio-hang");  
+    onClose();
+    navigate("/gio-hang");
   };
 
   const goToCheckout = () => {
@@ -30,30 +29,41 @@ export default function CartDrawer({ open, onClose, items = [] }) {
 
   return ReactDOM.createPortal(
     <div className="fixed inset-0 z-50 flex">
+      {/* overlay */}
       <div className="flex-1 bg-black/40" onClick={onClose} />
 
-      <div className="relative w-full max-w-md bg-white shadow-2xl flex flex-col">
-        <button onClick={onClose} className="absolute right-3 top-3 p-1">
+      {/* drawer */}
+      <div className="flex h-full w-full max-w-md flex-col bg-white shadow-2xl sm:max-w-sm md:max-w-md">
+        <button
+          onClick={onClose}
+          className="absolute right-3 top-3 rounded p-1.5 text-gray-600 hover:bg-gray-100"
+          aria-label="Đóng giỏ hàng"
+        >
           <X className="h-5 w-5" />
         </button>
 
-        <div className="flex-1 overflow-y-auto p-5">
-          <h2 className="text-lg font-semibold mb-4">Giỏ hàng</h2>
+        <div className="flex-1 overflow-y-auto px-4 pb-5 pt-10 sm:px-5">
+          <h2 className="mb-4 text-base font-semibold sm:text-lg">Giỏ hàng</h2>
 
           {items.length === 0 && (
             <p className="text-sm text-gray-500">Giỏ hàng trống</p>
           )}
 
           {items.map((item) => (
-            <div key={item.id} className="flex gap-3 border-b pb-3 mb-3">
+            <div
+              key={item.id}
+              className="mb-3 flex gap-3 border-b pb-3 last:border-b-0"
+            >
               <img
                 src={item.image}
                 alt={item.title}
-                className="h-16 w-16 rounded object-cover"
+                className="h-16 w-16 flex-shrink-0 rounded object-cover sm:h-18 sm:w-18"
               />
-              <div className="flex-1">
-                <div className="text-sm font-semibold">{item.title}</div>
-                <div className="text-xs mt-1">
+              <div className="flex flex-1 flex-col">
+                <div className="text-xs font-semibold sm:text-sm">
+                  {item.title}
+                </div>
+                <div className="mt-1 text-xs text-gray-600">
                   {item.quantity} x {formatCurrency(item.priceFrom)}
                 </div>
               </div>
@@ -61,21 +71,21 @@ export default function CartDrawer({ open, onClose, items = [] }) {
           ))}
         </div>
 
-        <div className="border-t p-5 space-y-3">
-          <div className="flex justify-between font-semibold">
+        <div className="space-y-3 border-t px-4 py-4 sm:px-5 sm:py-5">
+          <div className="flex justify-between text-sm font-semibold sm:text-base">
             <span>Tạm tính</span>
             <span>{formatCurrency(subtotal)}</span>
           </div>
 
           <button
-            className="w-full bg-gray-800 text-white py-3"
+            className="w-full rounded-md bg-gray-800 py-2.5 text-sm font-medium text-white hover:bg-gray-900 sm:py-3"
             onClick={goToCart}
           >
             Xem giỏ hàng
           </button>
 
           <button
-            className="w-full bg-gray-900 text-white py-3"
+            className="w-full rounded-md bg-gray-900 py-2.5 text-sm font-medium text-white hover:bg-black sm:py-3"
             onClick={goToCheckout}
           >
             Thanh toán

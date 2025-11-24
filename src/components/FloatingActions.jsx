@@ -2,17 +2,16 @@ import { Facebook } from "lucide-react";
 
 export default function FloatingActions() {
   return (
-    <div className="fixed right-4 bottom-4 flex flex-col gap-3">
-      
+    <div className="fixed bottom-3 right-3 z-50 flex flex-col gap-2 sm:bottom-4 sm:right-4 sm:gap-3">
       {/* Facebook */}
       <a
         href="https://www.facebook.com/profile.php?id=61582192517515&mibextid=wwXIfr&rdid=dTmQZodgwavp9K9u&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16KKF6XGzm%2F%3Ffrom_xma_click%3Dxma_web_url%26xma_click_id%3D64925436-EF05-43B5-A260-3C3B61F1EC69%26tam_xma_content_type%3D0%26is_fb_content%3Dtrue%26forward%3Dfalse%26ts%3D1763615090014%26pl%3D1#"
         target="_blank"
         rel="noopener noreferrer"
-        className="h-11 w-11 rounded-full bg-blue-600 text-white grid place-items-center shadow-lg"
+        className="grid h-11 w-11 place-items-center rounded-full bg-blue-600 text-white shadow-lg sm:h-12 sm:w-12"
         aria-label="Facebook"
       >
-        <Facebook className="h-5 w-5" />
+        <Facebook className="h-5 w-5 sm:h-6 sm:w-6" />
       </a>
 
       {/* TikTok (SVG custom) */}
@@ -20,7 +19,7 @@ export default function FloatingActions() {
         href="https://www.tiktok.com/@tranhhoasac?_r=1&_t=ZS-91Y3uMwePZ3&fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNDM3NjI2MzE2OTczNzg4AAEe7uzpjD6SDUZqS7XcLxuREhslJunqHDFRZkubuOWbXIrVN7CpedVqK8_QSFw_aem_5uIOpSCOiJzzhoAoqETHZg"
         target="_blank"
         rel="noopener noreferrer"
-        className="h-11 w-11 rounded-full bg-black text-white grid place-items-center shadow-lg"
+        className="grid h-11 w-11 place-items-center rounded-full bg-black text-white shadow-lg sm:h-12 sm:w-12"
         aria-label="TikTok"
       >
         <svg
@@ -34,7 +33,6 @@ export default function FloatingActions() {
             1.8 6.2 1.8h.8v-4.4H41z" />
         </svg>
       </a>
-
     </div>
   );
 }

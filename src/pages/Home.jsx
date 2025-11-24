@@ -12,24 +12,22 @@ export default function Home() {
 
   return (
     <>
-      <main>
+      <main className="min-h-screen">
         <HeroSlider />
 
-        {/* Section Giới Thiệu */}
-        <div ref={aboutRef}>
+        <section ref={aboutRef}>
           <About />
-        </div>
+        </section>
 
         <FeatureGrid />
 
-        {/* Section Sản Phẩm */}
-        <div ref={productsRef}>
+        <section ref={productsRef}>
           <ProductsSection
-            title="Tranh Tô Theo Số"
+            title="Tranh tô theo số"
             products={products}
-            viewMoreHref="#"
+            viewMoreHref="/tranh-to-theo-so"
           />
-        </div>
+        </section>
       </main>
 
       <FloatingActions />

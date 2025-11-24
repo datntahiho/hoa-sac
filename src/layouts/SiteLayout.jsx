@@ -1,4 +1,3 @@
-// src/layouts/SiteLayout.jsx
 import React, { useEffect, useState, useRef } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 
@@ -28,7 +27,6 @@ export default function SiteLayout() {
   // Hàm scroll chung
   const onGoScroll = (target) => {
     const sectionRef = scrollRefs[target];
-
     if (!sectionRef) return;
 
     // Nếu không ở / → chuyển về home kèm hash
@@ -69,22 +67,26 @@ export default function SiteLayout() {
     return () => window.removeEventListener("cart-changed", listener);
   }, []);
 
-  return (
-    <div className="min-h-screen flex flex-col">
-      <TopBar
-        phone="0587.10.20.03"
-        onCartClick={() => setIsCartOpen(true)}
-        cartCount={cartItems.reduce((s, i) => s + i.quantity, 0)}
-      />
+  const cartCount = cartItems.reduce((s, i) => s + i.quantity, 0);
 
-      <TopNav onGoScroll={onGoScroll} />
+  return (
+    <div className="flex min-h-screen flex-col">
+      {/* Header sticky cho mobile */}
+      <header className="sticky top-0 z-40 bg-white">
+        <TopBar
+          phone="0587.10.20.03"
+          onCartClick={() => setIsCartOpen(true)}
+          cartCount={cartCount}
+        />
+        <TopNav onGoScroll={onGoScroll} />
+      </header>
 
       <ScrollToTop />
 
       {/* Truyền ref xuống Home */}
-      <div className="flex-1 bg-yellow-50/60">
+      <main className="flex-1 bg-yellow-50/60">
         <Outlet context={{ aboutRef, productsRef }} />
-      </div>
+      </main>
 
       <Footer />
 
