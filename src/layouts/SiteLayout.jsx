@@ -1,6 +1,6 @@
 // src/layouts/SiteLayout.jsx
-import React, { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import React, { useEffect, useState, useRef } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 
 import TopBar from "@/components/TopBar";
 import Footer from "@/components/Footer";
@@ -10,53 +10,80 @@ import CartDrawer from "@/components/carts/CartDrawer";
 import { getCartItems } from "@/utils/cartStorage";
 import productsData from "@/data/products.js";
 import TopNav from "@/components/TopNav";
+
 export default function SiteLayout() {
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [cartItems, setCartItems] = useState([]); // chứa FULL product + quantity
+  const [cartItems, setCartItems] = useState([]);
+  const location = useLocation();
 
-  // JOIN cart(id+qty) với PRODUCTS
+  // 2 ref: About + Products
+  const aboutRef = useRef(null);
+  const productsRef = useRef(null);
+
+  const scrollRefs = {
+    about: aboutRef,
+    products: productsRef,
+  };
+
+  // Hàm scroll chung
+  const onGoScroll = (target) => {
+    const sectionRef = scrollRefs[target];
+
+    if (!sectionRef) return;
+
+    // Nếu không ở / → chuyển về home kèm hash
+    if (location.pathname !== "/") {
+      window.location.href = `/#${target}`;
+      return;
+    }
+
+    // Nếu đang ở trang home → scroll mượt
+    setTimeout(() => {
+      if (sectionRef.current) {
+        sectionRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 50);
+  };
+
+  // Join cart
   const joinCartData = () => {
-    const rawCart = getCartItems(); // [{id, quantity}]
+    const rawCart = getCartItems();
     const fullItems = rawCart
       .map((c) => {
-        const product = productsData.find((p) => p.id === c.id);
-        if (!product) return null;
-        return {
-          ...product,
-          quantity: c.quantity,
-        };
+        const p = productsData.find((x) => x.id === c.id);
+        if (!p) return null;
+        return { ...p, quantity: c.quantity };
       })
       .filter(Boolean);
 
     setCartItems(fullItems);
   };
 
-  // load giỏ hàng ban đầu
   useEffect(() => {
     joinCartData();
-
-    const onChange = () => joinCartData();
-    window.addEventListener("cart-changed", onChange);
-
-    return () => window.removeEventListener("cart-changed", onChange);
+    const listener = () => joinCartData();
+    window.addEventListener("cart-changed", listener);
+    return () => window.removeEventListener("cart-changed", listener);
   }, []);
-
-  const cartCount = cartItems.reduce((sum, i) => sum + i.quantity, 0);
 
   return (
     <div className="min-h-screen flex flex-col">
       <TopBar
         phone="0587.10.20.03"
         onCartClick={() => setIsCartOpen(true)}
-        cartCount={cartCount}
+        cartCount={cartItems.reduce((s, i) => s + i.quantity, 0)}
       />
-              <TopNav/>
-      
+
+      <TopNav onGoScroll={onGoScroll} />
 
       <ScrollToTop />
 
+      {/* Truyền ref xuống Home */}
       <div className="flex-1 bg-yellow-50/60">
-        <Outlet />
+        <Outlet context={{ aboutRef, productsRef }} />
       </div>
 
       <Footer />
@@ -64,7 +91,7 @@ export default function SiteLayout() {
       <CartDrawer
         open={isCartOpen}
         onClose={() => setIsCartOpen(false)}
-        items={cartItems} // truyền dữ liệu FULL để render
+        items={cartItems}
       />
     </div>
   );

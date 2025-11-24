@@ -6,9 +6,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
           <h4 className="font-semibold mb-2 text-white">HOẠ SẮC</h4>
-          <p className="text-sm text-red-100">
-            Xưởng tranh tô – giá tốt – giao nhanh tại TP.HN.
-          </p>
+      
           <p className="text-sm text-red-100">
             Hotline: 0587102003 <br /> Email: tranhhoasac@gmail.com
           </p>
