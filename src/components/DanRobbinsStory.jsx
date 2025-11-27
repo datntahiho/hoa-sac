@@ -69,7 +69,7 @@ const DanRobbinsStory = () => {
                 <img
                   src="/images/_106313465_dan.jpg"
                   alt="Dan Robbins – người khai sinh tranh số hóa"
-                  className="w-full h-auto object-cover"
+                  className="mx-auto h-auto max-h-72 md:max-h-96 w-full object-contain"
                 />
                 <figcaption className="bg-slate-50 px-4 py-2 text-center text-xs text-slate-500 italic">
                   Dan Robbins – người đứng sau trào lưu paint-by-numbers nổi
@@ -135,7 +135,7 @@ const DanRobbinsStory = () => {
                 <img
                   src="/images/pf-ccec312f-6036-4296-b74b-0e3cb45ad69e--Dan-Robbins-el-inventor-de-la-pintura-por-numeros-2_480x480.webp"
                   alt="Abstract No. One – bức tranh tô màu theo số đầu tiên"
-                  className="w-full h-auto object-cover"
+                  className="mx-auto h-auto max-h-72 md:max-h-96 w-full object-contain"
                 />
                 <figcaption className="bg-slate-50 px-4 py-2 text-center text-xs text-slate-500 italic">
                   “Abstract No. One” – một trong những tác phẩm paint-by-numbers
@@ -206,7 +206,7 @@ const DanRobbinsStory = () => {
                 <img
                   src="/images/06Robbins-obit1-articleLarge-v2.webp"
                   alt="Chân dung tự họa theo phong cách paint-by-numbers của Dan Robbins"
-                  className="w-full h-auto object-cover"
+                  className="mx-auto h-auto max-h-72 md:max-h-96 w-full object-contain"
                 />
                 <figcaption className="bg-slate-50 px-4 py-2 text-center text-xs text-slate-500 italic">
                   Chân dung tự họa theo phong cách paint-by-numbers của Dan
@@ -220,7 +220,7 @@ const DanRobbinsStory = () => {
                 <img
                   src="/images/cha-de-1.webp"
                   alt="Abstract No. 1 – tác phẩm paint-by-numbers đầu tiên"
-                  className="w-full h-auto object-cover"
+                  className="mx-auto h-auto max-h-72 md:max-h-96 w-full object-contain"
                 />
                 <figcaption className="bg-slate-50 px-4 py-2 text-center text-xs text-slate-500 italic">
                   Abstract No. 1 – tác phẩm đầu tiên được Dan Robbins thiết kế
@@ -233,7 +233,7 @@ const DanRobbinsStory = () => {
                 <img
                   src="/images/cha-de-2.webp"
                   alt="Dan Robbins cùng bức Old Mill Stream"
-                  className="w-full h-auto object-cover"
+                  className="mx-auto h-auto max-h-72 md:max-h-96 w-full object-contain"
                 />
                 <figcaption className="bg-slate-50 px-4 py-2 text-center text-xs text-slate-500 italic">
                   Dan Robbins cầm bức tranh tô màu theo số yêu thích của mình –
@@ -246,7 +246,7 @@ const DanRobbinsStory = () => {
                 <img
                   src="/images/cha-de-3.webp"
                   alt="Clipper Ship – tác phẩm của Dan Robbins"
-                  className="w-full h-auto object-cover"
+                  className="mx-auto h-auto max-h-72 md:max-h-96 w-full object-contain"
                 />
                 <figcaption className="bg-slate-50 px-4 py-2 text-center text-xs text-slate-500 italic">
                   Tác phẩm Clipper Ship của Dan Robbins, do một họa sĩ vô danh
@@ -259,7 +259,7 @@ const DanRobbinsStory = () => {
                 <img
                   src="/images/cha-de-4.webp"
                   alt="Love's Tribute – tác phẩm của Dan Robbins"
-                  className="w-full h-auto object-cover"
+                  className="mx-auto h-auto max-h-72 md:max-h-96 w-full object-contain"
                 />
                 <figcaption className="bg-slate-50 px-4 py-2 text-center text-xs text-slate-500 italic">
                   Love&apos;s Tribute – tác phẩm của Dan Robbins, do một họa sĩ
