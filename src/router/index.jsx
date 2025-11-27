@@ -13,6 +13,9 @@ import GuideOrderPayment from "@/pages/GuideOrderPayment";
 import BlogTranhPage from "@/pages/BlogTranhPage";
 import HoaSacNewsBlog from "@/components/HoaSacNewsBlog";
 import PaintByNumbersTrendDetail from "@/components/PaintByNumbersTrendDetail";
+import PaintByNumbersGuide from "@/components/PaintByNumbersGuide";
+import DanRobbinsStory from "@/components/DanRobbinsStory";
+import ContactPage from "@/pages/ContactPage";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -31,7 +34,22 @@ export const router = createBrowserRouter([
         path: "blog-tin-tuc/hoa-sac-tranh-so-hoa",
         element: <HoaSacNewsBlog />,
       },
-      { path: "blog-tin-tuc/vi-sao-tranh-so-hoa-gay-sot", element: <PaintByNumbersTrendDetail /> },
+      {
+        path: "blog-tin-tuc/vi-sao-tranh-so-hoa-gay-sot",
+        element: <PaintByNumbersTrendDetail />,
+      },
+      {
+        path: "blog-tin-tuc/huong-dan-to-tranh-so-hoa",
+        element: <PaintByNumbersGuide />,
+      },
+      {
+        path: "blog-tin-tuc/cau-chuyen-dan-robbins",
+        element: <DanRobbinsStory />,
+      },
+      {
+        path : "lien-he",
+        element : <ContactPage/>
+      },
 
       { path: "huong-dan-dat-hang-thanh-toan", element: <GuideOrderPayment /> },
       { path: "*", element: <NotFound /> },

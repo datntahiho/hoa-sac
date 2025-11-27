@@ -9,53 +9,53 @@ const featurePost = {
   image: "/images/huong-dan-to-mau-tranh-so-hoa.webp",
 };
 
-const bottomLeftPosts = [
-  {
-    id: 1,
-    title:
-      "Tranh Tô Số Hóa – Từ “Trò Chơi Tô Màu” Thành Liệu Pháp Chữa Lành Tâm Hồn",
-    date: "25/01/2025",
-    image: "/images/banner-col-1.webp",
-    excerpt:
-      "Khám phá cách tranh tô số hóa giúp bạn tạm gác lại áp lực công việc, học tập để tìm về sự an yên trong từng nét cọ...",
-  },
-  {
-    id: 2,
-    title: "5 Lý Do Giới Trẻ Mê Mệt Tranh Tô Số Hóa: Vừa Chill Vừa Đẹp Nhà",
-    date: "25/01/2025",
-    image:
-      "/images/275110551_5175824945781558_419422465210416982_n-1024x1365.jpeg",
-    excerpt:
-      "Không chỉ là thú vui cuối tuần, tranh tô số hóa còn là cách để giới trẻ trang trí không gian sống theo phong cách rất riêng...",
-  },
-  {
-    id: 3,
-    title:
-      "Lần Đầu Thử Tranh Tô? Bí Kíp Để Bức Tranh Đầu Tay Vẫn Đẹp “Chuẩn Gallery”",
-    date: "25/01/2025",
-    image: "/images/banner-col-2.webp",
-    excerpt:
-      "Từ cách chọn mẫu, sắp xếp thời gian đến mẹo tô màu không lem, bài viết này sẽ giúp bạn tự tin với bức tranh đầu tiên...",
-  },
-  {
-    id: 4,
-    title:
-      "Từ Canvas Trắng Đến Tác Phẩm Nghệ Thuật: Hành Trình Một Bức Tranh Tô Số Hóa",
-    date: "25/01/2025",
-    image: "/images/1.png",
-    excerpt:
-      "Theo dõi hành trình một bức tranh tô số hóa từ những ô số khô khan đến tác phẩm tràn đầy cảm xúc treo trên tường nhà bạn...",
-  },
-  {
-    id: 5,
-    title:
-      "Tặng Gì Cho Người Thân? Tranh Tô Số Hóa – Món Quà Tự Tay Làm, Đậm Chất Riêng",
-    date: "25/01/2025",
-    image: "/images/huong-dan-to-mau-tranh-so-hoa.webp",
-    excerpt:
-      "Một món quà không chỉ có giá trị vật chất mà còn chứa thời gian, tâm huyết và tình cảm mà bạn gửi gắm trong từng nét cọ...",
-  },
-];
+// const bottomLeftPosts = [
+//   {
+//     id: 1,
+//     title:
+//       "Tranh Tô Số Hóa – Từ “Trò Chơi Tô Màu” Thành Liệu Pháp Chữa Lành Tâm Hồn",
+//     date: "25/01/2025",
+//     image: "/images/banner-col-1.webp",
+//     excerpt:
+//       "Khám phá cách tranh tô số hóa giúp bạn tạm gác lại áp lực công việc, học tập để tìm về sự an yên trong từng nét cọ...",
+//   },
+//   {
+//     id: 2,
+//     title: "5 Lý Do Giới Trẻ Mê Mệt Tranh Tô Số Hóa: Vừa Chill Vừa Đẹp Nhà",
+//     date: "25/01/2025",
+//     image:
+//       "/images/275110551_5175824945781558_419422465210416982_n-1024x1365.jpeg",
+//     excerpt:
+//       "Không chỉ là thú vui cuối tuần, tranh tô số hóa còn là cách để giới trẻ trang trí không gian sống theo phong cách rất riêng...",
+//   },
+//   {
+//     id: 3,
+//     title:
+//       "Lần Đầu Thử Tranh Tô? Bí Kíp Để Bức Tranh Đầu Tay Vẫn Đẹp “Chuẩn Gallery”",
+//     date: "25/01/2025",
+//     image: "/images/banner-col-2.webp",
+//     excerpt:
+//       "Từ cách chọn mẫu, sắp xếp thời gian đến mẹo tô màu không lem, bài viết này sẽ giúp bạn tự tin với bức tranh đầu tiên...",
+//   },
+//   {
+//     id: 4,
+//     title:
+//       "Từ Canvas Trắng Đến Tác Phẩm Nghệ Thuật: Hành Trình Một Bức Tranh Tô Số Hóa",
+//     date: "25/01/2025",
+//     image: "/images/1.png",
+//     excerpt:
+//       "Theo dõi hành trình một bức tranh tô số hóa từ những ô số khô khan đến tác phẩm tràn đầy cảm xúc treo trên tường nhà bạn...",
+//   },
+//   {
+//     id: 5,
+//     title:
+//       "Tặng Gì Cho Người Thân? Tranh Tô Số Hóa – Món Quà Tự Tay Làm, Đậm Chất Riêng",
+//     date: "25/01/2025",
+//     image: "/images/huong-dan-to-mau-tranh-so-hoa.webp",
+//     excerpt:
+//       "Một món quà không chỉ có giá trị vật chất mà còn chứa thời gian, tâm huyết và tình cảm mà bạn gửi gắm trong từng nét cọ...",
+//   },
+// ];
 
 const sidebarList = [
   {
@@ -68,19 +68,17 @@ const sidebarList = [
   },
   {
     id: 2,
-    title: "5 Lý Do Giới Trẻ Mê Mệt Tranh Tô Số Hóa: Vừa Chill Vừa Đẹp Nhà",
+    title: "Hướng Dẫn Cách Tô Tranh Số Hóa (Paint-by-Numbers) ",
     date: "25/01/2025",
-    image: "/images/IMG_3520.JPG",
-    path: "#",
+    image: "/images/cach-to-mau-tranh-so-hoa.jpg",
+    path: "/blog-tin-tuc/huong-dan-to-tranh-so-hoa",
   },
   {
     id: 3,
-    title:
-      "Lần Đầu Thử Tranh Tô? Bí Kíp Để Bức Tranh Đầu Tay Vẫn Đẹp “Chuẩn Gallery”",
+    title: "Dan Robbins: Người sáng tạo ra “Tranh số hóa",
     date: "25/01/2025",
-    image:
-      "/images/275110551_5175824945781558_419422465210416982_n-1024x1365.jpeg",
-    path: "#",
+    image: "/images/_106313465_dan.jpg",
+    path: "/blog-tin-tuc/cau-chuyen-dan-robbins",
   },
 ];
 
@@ -144,7 +142,7 @@ const BlogTranhPage = () => {
                     </div>
                   </article>
                 </Link> */}
-                {bottomLeftPosts.map((post) => (
+                {/* {bottomLeftPosts.map((post) => (
                   <Link to="/blog-tin-tuc/hoa-sac-tranh-so-hoa" key={post.id}>
                     <article className="flex flex-col rounded-lg border border-slate-200 bg-white shadow-sm hover:shadow-md transition-shadow cursor-pointer">
                       <div className="aspect-[4/3] w-full overflow-hidden rounded-t-lg bg-slate-200">
@@ -166,7 +164,7 @@ const BlogTranhPage = () => {
                       </div>
                     </article>
                   </Link>
-                ))}
+                ))} */}
               </div>
             </div>
 

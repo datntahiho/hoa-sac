@@ -8,7 +8,7 @@ function PhotoStack({
     <div className="relative flex w-full justify-center lg:justify-end">
       <div className="relative w-full max-w-[620px]">
         {/* BACK PHOTO: nhỏ hơn & lệch trái-trên */}
-        <div className="absolute -left-3 -top-6 hidden w-[60%] overflow-hidden rounded-3xl shadow-[0_18px_40px_rgba(0,0,0,0.18)] sm:block">
+        {/* <div className="absolute -left-3 -top-6 hidden w-[60%] overflow-hidden rounded-3xl shadow-[0_18px_40px_rgba(0,0,0,0.18)] sm:block">
           <div className="relative aspect-[4/3]">
             <img
               src={bgSrc}
@@ -16,7 +16,7 @@ function PhotoStack({
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
-        </div>
+        </div> */}
 
         {/* FRONT PHOTO */}
         <div className="relative z-10 ml-auto">
@@ -76,6 +76,7 @@ export default function About() {
             muốn góp phần phát huy và lan tỏa bản sắc Việt Nam tới tất cả mọi
             người.
           </p>
+        
 
           <a
             href="#"

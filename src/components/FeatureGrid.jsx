@@ -1,18 +1,18 @@
 const BANNERS = [
   {
-    title: "Xưởng tranh tô tại Hà Nội",
-    desc: "Sản xuất trực tiếp – giá tốt cho mọi đơn hàng.",
-    image: "/images/banner-col-1.webp",
+    title: "Shop tranh tô tại Hà Nội",
+    desc: "Các workshop được tổ chức thường niên.",
+    image: "/images/workshop-ve-tranh-sai-gon-04-1715652752.jpeg",
   },
   {
     title: "Trọn bộ dụng cụ đầy đủ",
     desc: "Mỗi tranh đều kèm màu, cọ, móc treo – mở ra là tô được ngay.",
-    image: "/images/banner-col-2.webp",
+    image: "/images/1-1628261830949477002501.jpg",
   },
   {
-    title: "Đóng gói & giao hàng cẩn thận",
-    desc: "Đóng gói chống sốc, giao hàng toàn quốc nhanh chóng.",
-    image: "/images/banner-col-3.webp",
+    title: "Đa dạng các loại mẫu mã",
+    desc: "Nhiều chủ đề tranh phù hợp với mọi lứa tuổi và sở thích.",
+    image: "/images/pf-ccec312f-6036-4296-b74b-0e3cb45ad69e--Dan-Robbins-el-inventor-de-la-pintura-por-numeros-2_480x480.webp",
   },
 ];
 
