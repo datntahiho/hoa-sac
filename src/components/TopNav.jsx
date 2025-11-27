@@ -85,9 +85,9 @@ const TopNav = ({ onGoScroll }) => {
       <div className="mx-auto max-w-6xl px-2 sm:px-4">
         {/* Header: logo + hamburger */}
         <div className="flex items-center justify-between py-1 sm:py-0">
-          <div className="py-2 text-sm sm:text-base font-semibold uppercase tracking-wide">
+          {/* <div className="py-2 text-sm sm:text-base font-semibold uppercase tracking-wide">
             Họa Sắc
-          </div>
+          </div> */}
 
           {/* Nút hamburger chỉ hiện trên mobile */}
           <button
