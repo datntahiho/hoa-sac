@@ -9,12 +9,12 @@ export default function TopBar({
   return (
     <div className="w-full border-b bg-[#F3E1BD]">
       <div className="mx-auto grid max-w-6xl grid-cols-3 items-center px-4 py-2 gap-3">
-        
         {/* LEFT: Hotline */}
         <div className="flex items-center gap-2 text-xs sm:text-sm">
           <Phone className="h-4 w-4 text-emerald-600" />
           <span className="hidden xs:inline">
-            Hotline: <strong className="font-semibold whitespace-nowrap">{phone}</strong>
+            Hotline:{" "}
+            <strong className="font-semibold whitespace-nowrap">{phone}</strong>
           </span>
           <span className="xs:hidden font-semibold">{phone}</span>
         </div>
@@ -22,12 +22,11 @@ export default function TopBar({
         {/* CENTER: Logo */}
         <div className="flex items-center justify-center overflow-visible">
           <a href="/" className="flex justify-center items-center">
-         <img
-  src={logoSrc}
-  alt="HOASAC"
-  className="h-10 w-auto object-contain scale-[3.5]"
-/>
-
+            <img
+              src={logoSrc}
+              alt="HOASAC"
+              className="h-10 w-auto object-contain scale-[3.5]"
+            />
           </a>
         </div>
 
@@ -52,7 +51,6 @@ export default function TopBar({
             </span>
           </button>
         </div>
-
       </div>
     </div>
   );
