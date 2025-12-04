@@ -97,7 +97,7 @@ export default function VanMieuQuocTuGiamStory() {
           className="mx-auto max-h-72 object-cover"
         />
         <figcaption className="text-center text-xs text-gray-500">
-Ảnh: Văn Miếu ngày nay ( Nguồn: Internet ) 
+          Ảnh: Văn Miếu ngày nay ( Nguồn: Internet )
         </figcaption>
       </figure>
 

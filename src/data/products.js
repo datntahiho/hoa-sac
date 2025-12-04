@@ -7,6 +7,9 @@ import DuongTruongSonStory from "@/components/stories/DuongTruongSonStory.jsx";
 import HoangThanhThangLongStory from "@/components/stories/HoangThanhThangLongStory.jsx";
 import VanMieuQuocTuGiamStory from "@/components/stories/VanMieuQuocTuGiamStory.jsx";
 import KyDaiHueStory from "@/components/stories/KyDaiHueStory.jsx";
+import HoHoanKiemStory from "@/components/stories/HoHoanKiemStory.jsx";
+import KinhThanhHueStory from "@/components/stories/KinhThanhHueStory.jsx";
+import ThanhCoLoaStory from "@/components/stories/ThanhCoLoaStory.jsx";
 const products = [
   {
     id: "t01",
@@ -54,6 +57,7 @@ const products = [
     image: "/images/san-pham/ho-guom.png",
     priceFrom: 400000,
     href: "tranh-to/ho-guom",
+    StoryComponent: HoHoanKiemStory,
   },
   {
     id: "t07",
@@ -69,6 +73,7 @@ const products = [
     image: "/images/san-pham/kinh-thanh-hue.png",
     priceFrom: 400000,
     href: "tranh-to/kinh-thanh-hue",
+    StoryComponent: KinhThanhHueStory,
   },
 {
     id: "t09",
@@ -84,6 +89,7 @@ const products = [
     image: "/images/san-pham/thanh-co-loa.png",
     priceFrom: 400000,
     href: "tranh-to/thanh-co-loa",
+    StoryComponent: ThanhCoLoaStory,
   },
   {
     id: "t11",
