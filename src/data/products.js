@@ -25,7 +25,7 @@ const products = [
     image: "/images/san-pham/den-ngoc-son.png",
     priceFrom: 400000,
     href: "tranh-to/den-ngoc-son",
-    StoryComponent: DenNgocSonStory,
+    StoryComponent: HoaLuStory,
   },
   {
     id: "t03",
@@ -33,7 +33,7 @@ const products = [
     image: "/images/san-pham/dia-dao-cu-chi.png",
     priceFrom: 400000,
     href: "tranh-to/dia-dao-cu-chi",
-    StoryComponent: CuChiStory,
+    StoryComponent: HoaLuStory,
   },
   {
     id: "t04",
@@ -41,7 +41,7 @@ const products = [
     image: "/images/san-pham/dinh-doc-lap.png",
     priceFrom: 400000,
     href: "tranh-to/dinh-doc-lap",
-    StoryComponent: DinhDocLapStory,
+    StoryComponent: HoaLuStory,
   },
   {
     id: "t05",
@@ -49,7 +49,7 @@ const products = [
     image: "/images/san-pham/duong-truong-son.png",
     priceFrom: 400000,
     href: "tranh-to/duong-truong-son",
-    StoryComponent: DuongTruongSonStory,
+    StoryComponent: HoaLuStory,
   },
   {
     id: "t06",
@@ -57,7 +57,7 @@ const products = [
     image: "/images/san-pham/ho-guom.png",
     priceFrom: 400000,
     href: "tranh-to/ho-guom",
-    StoryComponent: HoHoanKiemStory,
+    StoryComponent: HoaLuStory,
   },
   {
     id: "t07",
@@ -65,7 +65,7 @@ const products = [
     image: "/images/san-pham/hoang-thanh-thang-long.png",
     priceFrom: 400000,
     href: "tranh-to/hoang-thanh-thang-long",
-    StoryComponent: HoangThanhThangLongStory,
+    StoryComponent: HoaLuStory,
   },
   {
     id: "t08",
@@ -73,7 +73,7 @@ const products = [
     image: "/images/san-pham/kinh-thanh-hue.png",
     priceFrom: 400000,
     href: "tranh-to/kinh-thanh-hue",
-    StoryComponent: KinhThanhHueStory,
+    StoryComponent: HoaLuStory,
   },
 {
     id: "t09",
@@ -81,7 +81,7 @@ const products = [
     image: "/images/san-pham/ky-dai-hue.png",
     priceFrom: 400000,
     href: "tranh-to/ky-dai-hue",
-    StoryComponent: KyDaiHueStory,
+    StoryComponent: HoaLuStory,
   },
   {
     id: "t10",
@@ -89,7 +89,7 @@ const products = [
     image: "/images/san-pham/thanh-co-loa.png",
     priceFrom: 400000,
     href: "tranh-to/thanh-co-loa",
-    StoryComponent: ThanhCoLoaStory,
+    StoryComponent: HoaLuStory,
   },
   {
     id: "t11",
@@ -97,7 +97,7 @@ const products = [
     image: "/images/san-pham/van-mieu-quoc-tu-giam.png",
     priceFrom: 400000,
     href: "tranh-to/van-mieu-quoc-tu-giam",
-    StoryComponent: VanMieuQuocTuGiamStory,
+    StoryComponent: HoaLuStory,
   },
 ];
 

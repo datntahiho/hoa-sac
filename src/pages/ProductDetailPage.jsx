@@ -53,7 +53,7 @@ export default function ProductDetailPage({ product }) {
             </div>
           </div>
 
-          <SellingPoints points={product.sellingPoints || []} />
+          {/* <SellingPoints points={product.sellingPoints || []} /> */}
         </div>
       </div>
 
